@@ -1,0 +1,31 @@
+Source: libxml-sax-machines-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Jay Bonci <jaybonci@debian.org>,
+           Niko Tyni <ntyni@debian.org>,
+           Jonathan Yu <jawnsy@cpan.org>,
+           gregor herrmann <gregoa@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl,
+                     libcapture-tiny-perl,
+                     libxml-sax-perl,
+                     libxml-sax-writer-perl
+Standards-Version: 3.9.4
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libxml-sax-machines-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libxml-sax-machines-perl.git
+Homepage: https://metacpan.org/release/XML-SAX-Machines/
+
+Package: libxml-sax-machines-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libxml-sax-writer-perl,
+         libxml-sax-perl
+Description: Perl module collection for managing SAX processors
+ XML::SAX::Machines provides a collection of APIs that allow developers to
+ build complex Simple API for XML (SAX) machines quickly and minimalistically.
+ SAX machines are a way to gather and manage SAX processors. Each machine can
+ also be used individually as SAX processors; they do not need to parse or
+ write anything.
+

@@ -1,0 +1,41 @@
+Description: Fix errors with pod2man
+Origin: vendor
+Bug-CPAN: https://rt.cpan.org/Ticket/Display.html?id=47957
+Forwarded: yes
+Author: Jonathan Yu <frequency@cpan.org>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2013-10-11
+
+--- a/lib/XML/Filter/Distributor.pm
++++ b/lib/XML/Filter/Distributor.pm
+@@ -267,6 +266,8 @@
+ Provided for compatability with other SAX processors, use set_handlers
+ instead.
+ 
++=back
++
+ =head1 LIMITATIONS
+ 
+ Can only feed a single aggregator at the moment :).  I can fix this with
+--- a/lib/XML/Filter/DocSplitter.pm
++++ b/lib/XML/Filter/DocSplitter.pm
+@@ -294,6 +293,8 @@
+ 
+     my $a = $h->get_split_path;
+ 
++=back
++
+ =head1 LIMITATIONS
+ 
+ Can only feed a single aggregator at the moment :).  I can fix this with
+--- a/lib/XML/Filter/Merger.pm
++++ b/lib/XML/Filter/Merger.pm
+@@ -481,6 +481,8 @@
+ 
+ It is passed an empty ({}) data structure.
+ 
++=back
++
+ =head1 Additional Methods
+ 
+ These are provided to make it easy for subclasses to find out roughly

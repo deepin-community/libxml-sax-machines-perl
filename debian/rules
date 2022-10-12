@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+PERL   ?= /usr/bin/perl
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	$(PERL) -w -I$(TMP)/usr/share/perl5 -MXML::SAX::Machines::ConfigHelper -e "XML::SAX::Machines::ConfigHelper::_write_site_config_if_absent('$(TMP)/usr/share/perl5')"
+	# drop empty manpage
+	$(RM) -v $(TMP)/usr/share/man/man3/XML::SAX::Machines::ConfigDefaults.3pm

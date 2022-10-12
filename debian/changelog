@@ -1,0 +1,158 @@
+libxml-sax-machines-perl (0.46-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 02:14:26 +0100
+
+libxml-sax-machines-perl (0.46-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update copyright years, drop stanza about removed Module::Install.
+  * Install README.too instead of the boilerplate README.
+  * Add build dependency on libcapture-tiny-perl.
+  * Drop auto_set_repository.patch, refresh remaining patches.
+  * debian/rules: don't install new empty manpage.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 11 Oct 2013 19:05:21 +0200
+
+libxml-sax-machines-perl (0.42-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Add patch to remove the broken auto_set_repository from Makefile.PL.
+    (Closes: #711626)
+  * Switch to "3.0 (quilt)" source format. Remove quilt from package build.
+  * debian/copyright: switch formatting to Copyright-Format 1.0. Refresh
+    license stanzas.
+  * Bump debhelper compatibility level to 8.
+  * Set Standards-Version to 3.9.4 (no further changes).
+  * Add a patch to fix a spelling mistake.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 08 Jun 2013 18:20:33 +0200
+
+libxml-sax-machines-perl (0.42-1) unstable; urgency=low
+
+  * New upstream release
+    + Now uses Module::Install (removed vendorlibs.patch)
+    + No longer does that pseudo-hash thing (removed pseudo-hash.patch)
+  * Standards-Version 3.8.3
+  * Added myself to Uploaders and Copyright
+  * Added patch to fix pod2man errors
+  * Cleaned up Copyright
+  * debhelper 7 upgrade
+  * Rewrote control file description
+  * Add a warning in the docs for the SiteConfig.pm issue (Closes: #537582)
+  * Replace previous patch to vendorlibs with an entry in debian/rules. It
+    is needed to produce SiteConfig.pm
+
+  [ gregor herrmann ]
+  * Add debian/README.source to document quilt usage, as required by
+    Debian Policy since 3.8.0.
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Tue, 01 Sep 2009 13:08:56 -0400
+
+libxml-sax-machines-perl (0.41-3) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+  * debian/control:
+    - move debhelper and quilt to Build-Depends
+  * Set Maintainer to Debian Perl Group.
+  * Use dist-based URL in debian/watch.
+  * debian/rules: delete /usr/lib/perl5 only if it exists.
+  * debian/rules:
+    - rewrite from scratch with dh-make-perl template
+    - install README and TODO
+  * Split out patch for Makefile.PL into debian/patches/vendorlibs.patch,
+    adapt slightly to work with current debian/rules and to enable parallel
+    builds. Add quilt framework.
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Set debhelper compatibility level to 6.
+  * Remove debian/libxml-sax-machines-perl.examples, install examples
+    directly from debian/rules.
+  * debian/watch: improve pattern for matching upstream versions.
+  * debian/copyright:
+    - add additional copyright holder
+    - add upstream source location
+    - add copyright for the Debian packaging
+    - convert to new format
+
+  [ Niko Tyni ]
+  * debian/patches/pseudo-hash.patch: use an ordinary hash reference instead
+    of a pseudo hash to stay compatible with Perl 5.10. (Closes: #467316)
+  * Touch Makefile in the 'clean' target so it's newer than the unpatched
+    Makefile.PL
+  * Add myself to Uploaders.
+  * Build-depend on quilt (>= 0.40), for /usr/share/quilt/quilt.make
+  * debian/patches/vendorlib.patch: always write out SiteConfig.pm, even if
+    there's already a system-wide installation of XML::SAX::Machines.
+
+ -- Niko Tyni <ntyni@debian.org>  Thu, 13 Mar 2008 15:49:55 +0200
+
+libxml-sax-machines-perl (0.41-2) unstable; urgency=low
+
+  * Adds debian/watch file so uscan will work
+
+ -- Jay Bonci <jaybonci@debian.org>  Wed, 27 Oct 2004 12:52:44 -0400
+
+libxml-sax-machines-perl (0.41-1) unstable; urgency=low
+
+  * New upstream version
+  * New maintainer (Closes: #210542)
+  * Bumped policy-version to 3.6.1.0 (No other changes)
+  * Clarified copyright to current version (No more BSD license option)
+  * Removed .install file as it is no longer needed
+  * Migrated over to my standard rules template
+
+ -- Jay Bonci <jaybonci@debian.org>  Mon, 15 Mar 2004 14:25:20 -0500
+
+libxml-sax-machines-perl (0.40-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules: moved debhelper compatibility level setting to
+    'debian/compat' per latest debhelper best practices
+  * debian/control: updated sections according to latest archive changes:
+    - 'libxml-sax-machines-perl' from 'interpreters' to 'perl'
+  * debian/control: upgraded build dependency on 'debhelper' to '>= 4.1'
+  * debian/control: upgraded to Debian Policy 3.6.0 (no changes)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Sat,  6 Sep 2003 10:57:48 -0500
+
+libxml-sax-machines-perl (0.38-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/copyright: added pointer to license
+    (closes: Bug#157676)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Wed, 25 Sep 2002 06:52:19 -0500
+
+libxml-sax-machines-perl (0.34-1) unstable; urgency=low
+
+  * Initial release
+    (closes: Bug#151951)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Thu,  4 Jul 2002 15:26:17 -0500

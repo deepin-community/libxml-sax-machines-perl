@@ -1,0 +1,45 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: XML-SAX-Machines
+Upstream-Contact: Chris Prather <chris@prather.org>
+Source: https://metacpan.org/release/XML-SAX-Machines/
+
+Files: *
+Copyright: 2002-2013, Barrie Slaymaker <barries@slaysys.com>
+License: Artistic or GPL-1+
+ You may use this module under the terms of the Artistic, GPL, or the BSD
+ licenses.
+Comment: It is not clear which BSD flavour the authors had in mind; so we
+ distribute the package under GPL/Artistic, like Perl itself and most Perl
+ modules.
+
+Files: lib/XML/SAX/EventMethodMaker.pm
+Copyright:
+ Database Copyright 2002, Barrie Slaymaker, Kip Hampton, Robin Berjon
+ Code Copyright 2002, Barrie Slaymaker <barries@slaysys.com>
+License: Artistic or GPL-1+
+ You may use this under the terms of the Artistic, GNU Public, or BSD licenses,
+ as you see fit.
+
+Files: debian/*
+Copyright: 2002-2003, Ardo van Rangelrooij <ardo@debian.org>
+ 2004, Jay Bonci <jaybonci@debian.org>
+ 2008, Niko Tyni <ntyni@debian.org>
+ 2008-2013, gregor herrmann <gregoa@debian.org>
+ 2009, Jonathan Yu <jawnsy@cpan.org>
+License: Artistic or GPL-1+
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian systems, the complete text of the Artistic License can be
+ found in `/usr/share/common-licenses/Artistic'.
+
+License: GPL-1+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
+ .
+ On Debian systems, the complete text of version 1 of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-1'.
